@@ -135,9 +135,6 @@ Contributions are welcome, provided they honor these core principles: clarity, m
 
 Because every teapot deserves a little personality. Here's an ASCII rendition you can drop into the README for extra charm:
 
-<details>
-<summary><strong>Show me the teapot</strong></summary>
-
 ```bash
 
    (
@@ -151,5 +148,3 @@ Because every teapot deserves a little personality. Here's an ASCII rendition yo
   '._        _.'
      `''''''`
 ```
-
-</details>
