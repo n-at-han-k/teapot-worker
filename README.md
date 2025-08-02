@@ -104,3 +104,27 @@ Integration tests that verify the teapot behavior across edge cases
 A visual status dashboard (spoiler: it will still show “I’m a teapot”)
 
 Please fork, branch, and open a pull request. Include descriptive commit messages. No cryptic one-liners. Humans read this later.
+
+
+## Bonus: ASCII Teapot (for README flair)
+
+Because every teapot deserves a little personality. Here's an ASCII rendition you can drop into the README for extra charm:
+
+<details>
+<summary><strong>Show me the teapot</strong></summary>
+
+```bash
+
+   (
+    )     (
+     ___...--'`-.
+  .-'          /
+ /   .------.  \
+|   /        \  |
+|  |  .----.  | |
+ \  \_/____\_/ /
+  '._        _.'
+     `''''''`
+```
+
+</details>
