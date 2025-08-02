@@ -75,35 +75,60 @@ Because nothing says “I understand HTTP and also have a sense of humor” like
 Also, the teapot refuses to brew coffee. It respects its identity.
 
 ## FAQ / For Those Who Ask Too Many Questions
-Q: Can I use this to rate-limit angry bots?
-A: Absolutely. Let your aggressive scrapers hit the teapot and they’ll be gently reminded they’re talking to the wrong appliance.
 
-Q: Is this production-safe?
-A: If your production needs include making a service that always returns 418 I’m a teapot, then yes. Otherwise… maybe pair it with a real backend.
+<details>
+<summary><strong>Can I use this to rate-limit angry bots?</strong></summary>
 
-Q: Can I change the status code?
-A: The project’s soul is 418. Changing it is betrayal, but the code is tiny; fork it and evolve it as you please.
+Yes. Let aggressive scrapers hit the teapot and they’ll be gently reminded they’re talking to the wrong appliance. You can front it with a router or middleware that conditionally routes some traffic here.
+</details>
 
-Q: Why is there a header X-Teapot?
-A: Because the teapot wants to be recognized. It’s subtle swagger for HTTP headers.
+<details>
+<summary><strong>Is this production-safe?</strong></summary>
 
-Q: Does it drink tea or just make a statement?
-A: It is a teapot in spirit, not function. It exists to refuse gracefully.
+If your production requirement is “always return `418 I'm a teapot`,” then absolutely. For anything else, pair it with a real backend or conditional logic. The core worker is stateless, fast, and side-effect-free.
+</details>
+
+<details>
+<summary><strong>Can I change the status code?</strong></summary>
+
+The project’s spirit is built around `418`. Changing it is technically trivial (edit the status in the response), but philosophically a slight betrayal. Fork it, evolve it, and own that decision.
+</details>
+
+<details>
+<summary><strong>Why is there a header <code>X-Teapot</code>?</strong></summary>
+
+Because the teapot wants to be recognized. It’s subtle swagger for HTTP headers—an explicit signal that you’ve hit the whimsical endpoint.
+</details>
+
+<details>
+<summary><strong>Does it brew tea or just make a statement?</strong></summary>
+
+It is a teapot in spirit, not in function. Its job is to refuse gracefully with a wink and a well-structured JSON payload. Brewing is outside its contract.
+</details>
 
 ## Contributing
-Contributions are welcome, as long as they honor the spirit of the teapot: clarity, humor, and zero unnecessary complexity.
 
-Some ideas for contributions:
+Contributions are welcome, provided they honor these core principles: clarity, minimalism, and tongue-in-cheek spirit. If you plan to contribute, here’s how to get started:
 
-Translations of the message into different languages (keeping the 418 spirit)
+### 🛠️ How to Contribute
 
-A customizable variant with query-parameter-controlled “stoutness”
+1. **Fork the repository.**
+2. **Create a descriptive branch** (e.g., `add-french-translation`, `ci-response-checker`, `conditional-teapot-path`).
+3. **Make your changes.** Keep things readable. No cryptic one-liner commits—humans will read this later.
+4. **Write or update tests** where applicable. Example: verify that the endpoint returns `418` with the expected JSON structure.
+5. **Open a Pull Request** with:
+   - A clear title.
+   - Description of what you changed and why.
+   - Any relevant examples or test instructions.
 
-Integration tests that verify the teapot behavior across edge cases
+### 💡 Contribution Ideas
 
-A visual status dashboard (spoiler: it will still show “I’m a teapot”)
+- Translations of the message into other languages (preserving the 418 identity).
+- A variant that responds `418` only on specific paths or based on query parameters.
+- GitHub Actions that automatically request the worker and validate the response is still `418` with the expected payload.
+- A “stoutness” query parameter that changes the message text in a playful way.
+- Integration tests (e.g., using `curl` or HTTP clients) that assert immutability of the teapot response.
 
-Please fork, branch, and open a pull request. Include descriptive commit messages. No cryptic one-liners. Humans read this later.
 
 
 ## Bonus: ASCII Teapot (for README flair)
